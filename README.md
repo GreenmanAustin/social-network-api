@@ -18,7 +18,7 @@
 
   ## Usage
 
-  After downloaded the code from the repository and installing all dependencies, use "Insomnia" or a similar software to test out the functionality as shown in the following video walk through - <a href="https://drive.google.com/file/d/11jvaywn2QrhxRcrQhNyD7Vndve7rKPu3/view?usp=sharing">Video Demonstration</a>
+  After downloaded the code from the repository and installing all dependencies, use "Insomnia" or a similar software to test out the functionality as shown in the following video walk through - <a href="https://drive.google.com/file/d/1iFGR8niOJTBjYekUVUzXnpmZNv9Zk2O1/view?usp=sharing">Video Demonstration</a>
 
   ## Contributing
 
