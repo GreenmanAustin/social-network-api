@@ -5,15 +5,13 @@ const {
     createUser,
     updateUser,
     deleteUser,
-    deleteAllUser,
     addFriend,
     deleteFriend
 } = require('../controllers/user-controller');
 
 
 router
-    .route('/all')
-    .delete(deleteAllUser);
+    .route('/all');
 // Set up GET all and POST at /api/users
 router
     .route('/')

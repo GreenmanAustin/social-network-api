@@ -1,5 +1,4 @@
 const { User, Thought } = require('../models');
-const { Types } = require('mongoose');
 
 
 const userController = {
@@ -66,26 +65,8 @@ const userController = {
                     res.status(404).json({ message: 'No User found with this id!' });
                     return;
                 }
-                // console.log(dbUserData.thoughts);
-                const userData = JSON.stringify(dbUserData);
-                const userThoughts = JSON.parse(userData).thoughts;
-                userThoughts.map(thought => {
-                    // newThought = Types.ObjectId(thought);
-                    console.log("thought:", thought);
-                    Thought.findOneAndDelete({ _id: thought })
-                });
-
-                res.json(dbUserData);
-            })
-            .catch(err => res.status(400).json(err));
-    },
-    deleteAllUser(req, res) {
-        User.deleteMany({})
-            .then(dbUserData => {
-                if (!dbUserData) {
-                    res.status(404).json({ message: 'No User found with this id!' });
-                    return;
-                }
+                return Thought.deleteMany({ _id: { $in: dbUserData.thoughts } });
+            }).then(dbUserData => {
                 res.json(dbUserData);
             })
             .catch(err => res.status(400).json(err));
